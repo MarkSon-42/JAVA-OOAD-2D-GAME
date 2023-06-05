@@ -2,6 +2,7 @@ package main;
 
 import javax.swing.*;
 import java.awt.*;
+import entity.Player;
 
 public class GamePanel extends JPanel implements Runnable{
 
@@ -19,6 +20,7 @@ public class GamePanel extends JPanel implements Runnable{
     KeyHandler keyH = new KeyHandler();
     Thread gameThread;
 
+    Player player = new Player(this, keyH);
     // Set player's default position
 
     int playerX = 100;
